@@ -122,6 +122,10 @@ const _LANGUAGES = {
     },
 
     // Portuguese (Brazil)
+    'pt-BR': {
+        languages: require('../../../../lang/languages-pt-BR'),
+        main: require('../../../../lang/main-pt-BR')
+    },
     'ptBR': {
         languages: require('../../../../lang/languages-ptBR'),
         main: require('../../../../lang/main-ptBR')

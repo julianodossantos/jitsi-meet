@@ -8,7 +8,7 @@ import VideoLayout from '../../../../../modules/UI/videolayout/VideoLayout';
 import { connect, disconnect } from '../../../base/connection';
 import { translate } from '../../../base/i18n';
 import { connect as reactReduxConnect } from '../../../base/redux';
-import { getConferenceNameForTitle } from '../../../base/conference';
+import { getBackendSafeRoomName } from '../../../base/util';
 import { Chat } from '../../../chat';
 import { Filmstrip } from '../../../filmstrip';
 import { CalleeInfoContainer } from '../../../invite';
@@ -264,11 +264,14 @@ class Conference extends AbstractConference<Props, *> {
  * @returns {Props}
  */
 function _mapStateToProps(state) {
+    const currentLayout = getCurrentLayout(state);
+    const roomName = getBackendSafeRoomName(state['features/base/conference'].room);
+
     return {
         ...abstractMapStateToProps(state),
         _iAmRecorder: state['features/base/config'].iAmRecorder,
-        _layoutClassName: LAYOUT_CLASSNAMES[getCurrentLayout(state)],
-        _roomName: getConferenceNameForTitle(state)
+        _layoutClassName: LAYOUT_CLASSNAMES[currentLayout],
+        _roomName: roomName
     };
 }
 

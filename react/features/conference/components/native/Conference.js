@@ -165,10 +165,10 @@ class Conference extends AbstractConference<Props, *> {
     render() {
         return (
             <Container style = { styles.conference }>
-                <StatusBar
+                {/* <StatusBar
+                    backgroundColor = '#00000099'
                     barStyle = 'light-content'
-                    hidden = { true }
-                    translucent = { true } />
+                    translucent = { true } /> */}
                 { this._renderContent() }
             </Container>
         );
@@ -283,10 +283,10 @@ class Conference extends AbstractConference<Props, *> {
                   * The activity/loading indicator goes above everything, except
                   * the toolbox/toolbars and the dialogs.
                   */
-                    _connecting
-                        && <TintedView>
-                            <LoadingIndicator />
-                        </TintedView>
+                    // _connecting
+                    //     && <TintedView>
+                    //         <LoadingIndicator />
+                    //     </TintedView>
                 }
 
                 <SafeAreaView

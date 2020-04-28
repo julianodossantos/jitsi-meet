@@ -62,9 +62,10 @@ class NavigationBar extends Component<Props> {
                     <Text
                         numberOfLines = { 1 }
                         style = { styles.roomName }>
-                        { this.props._meetingName }
+                        {/* { this.props._meetingName } */}
+                        {'   '}
                     </Text>
-                    <ConferenceTimer />
+                    {/* <ConferenceTimer /> */}
                 </View>
             </View>
         ];

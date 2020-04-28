@@ -121,12 +121,12 @@ class Toolbox extends PureComponent<Props> {
                                 this._getChatButtonToggledStyle(toggledButtonStyles)
                             } />
                 }
-                {
+                {/* {
                     !_chatEnabled
                         && <InviteButton
                             styles = { buttonStyles }
                             toggledStyles = { toggledButtonStyles } />
-                }
+                } */}
                 <AudioMuteButton
                     styles = { buttonStyles }
                     toggledStyles = { toggledButtonStyles } />
